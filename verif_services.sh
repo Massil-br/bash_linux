@@ -14,12 +14,8 @@ for service in "${services[@]}"; do
     exit_code=$?
 
     if [ $exit_code -eq 0 ]; then
-        echo "$service est en cours d'exécution."
-    elif [ $exit_code -eq 1 ]; then 
-        echo "$service est inactif."
-    elif [ $exit_code -eq 3 ]; then
-        echo "$service n'est pas installé sur votre système."
+        echo "$service Validé."
     else
-        echo "$service a échoué ou est dans un état inconnu."
+        echo "$service Echec"
     fi
 done
