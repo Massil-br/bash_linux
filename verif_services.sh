@@ -15,7 +15,6 @@ fi
 
 services=()
 while IFS= read -r line; do
-    # Ajouter chaque ligne (nom de service) au tableau
     services+=("$line")
 done < "$1"
 

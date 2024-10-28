@@ -1,3 +1,6 @@
 apache2
 ssh
 dhcp
+mysql
+crontab
+ls
