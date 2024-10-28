@@ -15,7 +15,9 @@ for service in "${services[@]}"; do
 
     if [ $exit_code -eq 0 ]; then
         echo "$service Validé."
+        echo "exit code : $exit_code"
     else
         echo "$service Echec"
+        echo "exit code : $exit_code"
     fi
 done
