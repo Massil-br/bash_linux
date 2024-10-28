@@ -6,6 +6,12 @@ if [ -z "$service_name" ]; then
     exit 1
 fi 
 
+if ! systemctl list-units --type=service --all | grep -q "$service_name"; then
+    echo "Erreur : le service '$service_name' n'est pas installé ou reconnu."
+    exit 3
+fi
+
+
 service_status=$(systemctl is-active "$service_name")
 
 if [ "$service_status" = "active" ]; then
