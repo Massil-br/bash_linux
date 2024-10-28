@@ -25,20 +25,20 @@ for service in "${services[@]}"; do
     exit_code=$?
 
     if [ $exit_code -eq 0 ]; then
-        echo "$service_name est actif."
+        echo "$service est actif."
     elif [ $exit_code -eq 1 ]; then
-        echo "$service_name est inactif."
+        echo "$service est inactif."
     elif [ $exit_code -eq 2 ]; then
-        echo "$service_name a échoué."
+        echo "$service a échoué."
     elif [ $exit_code -eq 3 ]; then
-        echo "$service_name est en cours d'activation."
+        echo "$service est en cours d'activation."
     elif [ $exit_code -eq 4 ]; then
-        echo "$service_name est en cours de désactivation."
+        echo "$service est en cours de désactivation."
     elif [ $exit_code -eq 5 ]; then
-        echo "$service_name a un état inconnu."
+        echo "$service a un état inconnu."
     elif [ $exit_code -eq 6 ]; then
-        echo "$service_name est dans un état imprévu: $service_status."
+        echo "$service est dans un état imprévu"
     elif [ $exit_code -eq 7 ]; then 
-        echo "Erreur : le service '$service_name' n'est pas installé ou reconnu."
+        echo "Erreur : le service '$service' n'est pas installé ou reconnu."
     fi
 done
