@@ -7,7 +7,7 @@ if [ -z "$service_name" ]; then
 fi 
 
 
-if ! systemctl cat "$service_name" > /dev/null 2>&1; then
+if ! systemctl list-unit-files --type=service | grep -qw "$service_name"; then
     echo "Erreur : le service '$service_name' n'existe pas."
     exit 7
 fi
