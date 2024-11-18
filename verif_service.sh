@@ -3,7 +3,7 @@
 service_name=$1
 if [ -z "$service_name" ]; then 
     echo "Erreur : aucun nom de service founi."
-    exit 1
+    exit 8
 fi 
 
 if ! systemctl list-units --type=service --all | grep -q "$service_name"; then
