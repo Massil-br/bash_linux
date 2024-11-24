@@ -40,7 +40,7 @@ for service in "${services[@]}"; do
     elif [ $exit_code -eq 7 ]; then 
         echo "Erreur : le service '$service' n'est pas installé ou reconnu."
     elif [ $exit_code -eq 8 ]; then
-        echo "$service n'est pas un service correct."
+        echo "$service aucun nom de service donné."
     else 
         echo "$service n'existe pas ou une erreure inconnue est survenue"
     fi

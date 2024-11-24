@@ -2,13 +2,11 @@
 
 service_name=$1
 if [ -z "$service_name" ]; then 
-    echo "Erreur : aucun nom de service founi."
     exit 8
 fi 
 
 
 if ! systemctl list-unit-files --type=service | grep -qw "$service_name"; then
-    echo "Erreur : le service '$service_name' n'existe pas."
     exit 7
 fi
 
